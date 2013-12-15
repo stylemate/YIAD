@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="YIAD" />
+		<Option execution_dir="/home/chaorumee/YIAD2/" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -35,6 +36,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="connector.h" />
+		<Unit filename="fill.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -2,6 +2,7 @@
 #define LOGO_H_INCLUDED
 #endif // LOGO_H_INCLUDED
 void DrawLogo();
+void DrawMenu();
 void Narrate();
 void Load();
 void Intro(WINDOW* wNar);

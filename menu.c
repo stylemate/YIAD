@@ -44,18 +44,10 @@ void DrawMenu()
     wMenu = newwin(10,40,16,20);
     wborder(wMenu, '|', '|', '-', '-', '*', '*', '*', '*');
     mvwaddstr(wMenu,3,14,"New  Game(n)");
-    mvwaddstr(wMenu,6,14,"Load Game(l)");
     refresh();
     wrefresh(wLogo);
     wrefresh(wMenu);
     ch = getchar();
-    switch(ch)
-    {
-        case 'n':
-            break;
-        case 'l':
-            break;
-    }
     //clean up
     delwin(wLogo);
     delwin(wMenu);
