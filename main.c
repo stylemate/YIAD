@@ -51,6 +51,7 @@ void StatCheck();
 void LvlUp();
 monster SetMon(char name[15], char shape, float CurHP, float MaxHP, float atk, float def, int exp);
 void MonLoop();
+void End();
 WINDOW* wNar;
 WINDOW* wStat;
 WINDOW* wInfo;
@@ -133,6 +134,12 @@ int main() {
         StatCheck();
         FillStat(player);
     }while(ESC != (c =getch()));
+    //clean up
+    delwin(wNar);
+    delwin(wStat);
+    delwin(wInfo);
+    delwin(wKey);
+    delwin(wMap);
     return 0;
 }
 
@@ -188,6 +195,10 @@ void PlyrMv()
             player.CurHP += 5;
             FillStat(player);
             DrawMap();
+        }
+        if (map[y][x] == NEXT)
+        {
+            End();
         }
         refresh();
         wrefresh(wMap);
@@ -265,6 +276,11 @@ void Atk()
                     player.CurExp += pencil[aa].exp;
                     FillStat(player);
                     aa++;
+                }
+                if(map[y + deltay][x + deltax] == PENCIL)
+                {
+                    player.CurHP -= pencil[aa].atk;
+                    mvwprintw(wNar,2,1,"Pencil attacked you and dealt %.1f damage     ", pencil[aa].atk);
                 }
                 refresh();
                 wrefresh(wMap);
@@ -382,9 +398,9 @@ monster SetMon(char name[15], char shape, float CurHP, float MaxHP, float atk, f
 void MonLoop()
 {
     for(i = 0; i < RATNUM; i++)
-        rat[i] = SetMon("Rat", 'r', 5, 5, 1.5, 0, 3);
+        rat[i] = SetMon("Rat", 'r', 5, 5, 2, 0, 3);
     for(i = 0; i < PENNUM; i++)
-        pencil[i] = SetMon("Pencil", 'p', 4, 4, 2.5, 0, 5);
+        pencil[i] = SetMon("Pencil", 'p', 4, 4, 3, 0, 5);
 }
 
 void LvlUp()
@@ -405,4 +421,11 @@ void LvlUp()
         refresh();
         wrefresh(wNar);
     }
+}
+void End()
+{
+    clear();
+    mvprintw(0,0,"Hope you liked my work. Press any key to exit");
+    bb = getch();
+    exit(0);
 }
