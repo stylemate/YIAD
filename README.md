@@ -8,10 +8,14 @@ All Copyrights Maybe Reserved to Justin Cha
 
 How to Download Ncurses:
 type command in terminal
+
+
 	sudo apt-get install libncurses5-dev
 
 
 How to Compile This Crap:
+	
+
 	gcc main.c menu.c narrate.c fill.c -lcurses -o YIAD
 
-	Then YIAD executable will be built.
+Then YIAD executable will be built
