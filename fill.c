@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <curses.h>
-#include <strings.h>
 #include "connector.h"
 
 void FillInfo(WINDOW* wInfo, int stage)
@@ -19,4 +16,11 @@ void FillInfo(WINDOW* wInfo, int stage)
     }
     refresh();
     wrefresh(wInfo);
+}
+void FillKey(WINDOW* wKey)
+{
+    mvwaddstr(wKey,1,1,"A = Attack");
+    mvwaddstr(wKey,2,1,"Arrow Keys = Move");
+    refresh();
+    wrefresh(wKey);
 }

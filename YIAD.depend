@@ -1,9 +1,6 @@
 # depslib dependency file v1.0
-1387141572 source:/home/chaorumee/YIAD/main.c
-	<stdio.h>
-	<stdlib.h>
+1387148532 source:/home/chaorumee/YIAD/main.c
 	<curses.h>
-	<strings.h>
 	"connector.h"
 
 1387141610 source:/home/chaorumee/YIAD/menu.c
@@ -14,13 +11,10 @@
 
 1386052511 /home/chaorumee/YIAD/menu.h
 
-1387123957 /home/chaorumee/YIAD/connector.h
+1387148532 /home/chaorumee/YIAD/connector.h
 
-1387057286 source:/home/chaorumee/YIAD/narrate.c
-	<stdio.h>
-	<stdlib.h>
+1387146792 source:/home/chaorumee/YIAD/narrate.c
 	<curses.h>
-	<strings.h>
 	"connector.h"
 
 1387114768 source:/home/chaorumee/YIAD/info.c
@@ -30,10 +24,7 @@
 	<strings.h>
 	"connector.h"
 
-1387141045 source:/home/chaorumee/YIAD/fill.c
-	<stdio.h>
-	<stdlib.h>
+1387148548 source:/home/chaorumee/YIAD/fill.c
 	<curses.h>
-	<strings.h>
 	"connector.h"
 

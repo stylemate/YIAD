@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <curses.h>
-#include <strings.h>
 #include "connector.h"
 char name[10];
 

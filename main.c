@@ -1,11 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <curses.h>
-#include <strings.h>
 #include "connector.h"
 #define ESC 27 //27 is ASCII for Escape
 #define ATK 97 // a
-#define INT 105 //i
 #define FLOOR 0
 #define WALL 1
 #define RAT 2
@@ -35,6 +31,9 @@ typedef struct
     int exp;
 }monster;
 
+monster rat[RATNUM];
+monster pencil[PENNUM];
+
 bool IsPass(int y, int x);
 bool MonPass(WINDOW* wMap, int y, int x);
 void PlyrMv();
@@ -60,11 +59,6 @@ WINDOW* wMap;
 
 int i = 0, j = 0; //counter for monster
 int aa=0,bb=0,cc=0,dd=0,ee=0,ff=0,gg=0,hh=0;
-
-
-monster rat[RATNUM];
-monster pencil[PENNUM];
-
 
 
 
@@ -114,6 +108,7 @@ int main() {
 
     DrawMap();  //draw map
     FillInfo(wInfo, 1);
+    FillKey(wKey);
     FillStat(player);
     mvwaddch(wMap, y,x,'@'); //draw character
     refresh();
@@ -210,7 +205,7 @@ void Atk()
     int deltax = 0, deltay = 0;
     switch(c)
     {
-        case 97:
+        case ATK:
             mvwaddstr(wNar,2,1,"                                                  ");
             mvwaddstr(wNar,3,1,"                                                  ");
             mvwaddstr(wNar,2,1,"Which direction do you want to attack?");

@@ -2,18 +2,18 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="connector.h" open="1" top="0" tabpos="2">
-		<Cursor position="84" topLine="0" />
+		<Cursor position="234" topLine="0" />
 	</File>
 	<File name="fill.c" open="1" top="0" tabpos="3">
-		<Cursor position="451" topLine="0" />
+		<Cursor position="499" topLine="0" />
 	</File>
 	<File name="main.c" open="1" top="1" tabpos="1">
-		<Cursor position="12796" topLine="384" />
+		<Cursor position="4210" topLine="105" />
 	</File>
 	<File name="menu.c" open="1" top="0" tabpos="5">
-		<Cursor position="1408" topLine="0" />
+		<Cursor position="179" topLine="12" />
 	</File>
 	<File name="narrate.c" open="1" top="0" tabpos="4">
-		<Cursor position="119" topLine="0" />
+		<Cursor position="19" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

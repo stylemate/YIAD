@@ -7,3 +7,4 @@ void Narrate();
 void Load();
 void Intro(WINDOW* wNar);
 void FillInfo(WINDOW* wInfo, int stage);
+void FillKey(WINDOW* wKey);
