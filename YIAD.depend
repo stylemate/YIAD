@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1387110887 source:/home/chaorumee/YIAD/main.c
+	<stdio.h>
+	<stdlib.h>
+	<curses.h>
+	<strings.h>
+	"connector.h"
+
+1386549723 source:/home/chaorumee/YIAD/menu.c
+	<curses.h>
+	"connector.h"
+
+1386052511 /home/chaorumee/YIAD/logo.h
+
+1386052511 /home/chaorumee/YIAD/menu.h
+
+1387058047 /home/chaorumee/YIAD/connector.h
+
+1387057286 source:/home/chaorumee/YIAD/narrate.c
+	<stdio.h>
+	<stdlib.h>
+	<curses.h>
+	<strings.h>
+	"connector.h"
+
+1387058094 source:/home/chaorumee/YIAD/info.c
+	<stdio.h>
+	<stdlib.h>
+	<curses.h>
+	<strings.h>
+	"connector.h"
+
