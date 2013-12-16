@@ -16,6 +16,6 @@ type command in terminal
 How to Compile This Crap:
 	
 
-	gcc main.c menu.c narrate.c fill.c info.c -lcurses -o YIAD
+	gcc main.c menu.c narrate.c fill.c -lcurses -o YIAD
 
 Then YIAD executable will be built
